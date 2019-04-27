@@ -4,7 +4,6 @@
         font-size: 1.6rem;
         line-height: 1.7;
         color: $color-grey-dark;
-        padding: 3rem;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
@@ -26,6 +25,10 @@
             animation-duration: 1s;
             -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
+            @include respond(phone) {
+                letter-spacing: 1rem;
+                font-family: 5rem;
+            }
             /* 
 animation-iteration-count: 3;
 animation-delay: 3s; */
@@ -37,6 +40,9 @@ animation-delay: 3s; */
             letter-spacing: 1.75rem;
             -webkit-animation: moveInRight 1s ease-out;
             animation: moveInRight 1s ease-out;
+            @include respond(phone) {
+                letter-spacing: .5rem;
+            }
         }
     }
     
@@ -52,6 +58,12 @@ animation-delay: 3s; */
         color: transparent;
         letter-spacing: .2rem;
         transition: all .2s;
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
         &:hover {
             transform: skewY(2deg) skewX(15deg) scale(1.1);
             text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
